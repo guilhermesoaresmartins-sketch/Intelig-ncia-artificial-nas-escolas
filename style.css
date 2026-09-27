@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f9ff;
+    color: #10233f;
+}
+
+
+/* HEADER */
+
+header {
+    height: 75px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    border-bottom: 1px solid #e5edf8;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
+}
+
+.logo {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    background: #1464ff;
+    color: white;
+
+    padding: 8px;
+    border-radius: 8px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #53657d;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #1464ff;
+}
+
+
+/* ELEMENTOS GERAIS */
+
+section {
+    padding: 100px 8%;
+}
+
+.tag {
+    color: #1464ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 1.05;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 1.1;
+}
+
+h1 span,
+h2 span {
+    color: #1464ff;
+}
+
+p {
+    line-height: 1.7;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            #dceaff,
+            transparent 30%
+        );
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero-text > p:not(.tag) {
+    color: #63748a;
+    font-size: 18px;
+
+    max-width: 550px;
+
+    margin: 25px 0;
+}
+
+button {
+    border: none;
+
+    background: #1464ff;
+    color: white;
+
+    padding: 14px 22px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #0d4fd0;
+    transform: translateY(-2px);
+}
+
+
+/* CARD DO ROBÔ */
+
+.hero-card {
+    width: 300px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 20px 50px rgba(20, 100, 255, 0.12);
+
+    text-align: center;
+}
+
+.robot {
+    width: 100px;
+    height: 100px;
+
+    background: #e5efff;
+
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 50px;
+
+    margin: 0 auto 20px;
+}
+
+.hero-card h3 {
+    margin-bottom: 10px;
+}
+
+.hero-card p {
+    color: #718096;
+    font-size: 14px;
+}
+
+
+/* SOBRE */
+
+.sobre {
+    background: white;
+
+    max-width: 1000px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.sobre h2 {
+    max-width: 700px;
+    margin: auto;
+}
+
+.sobre p:not(.tag) {
+    max-width: 700px;
+    margin: 25px auto;
+
+    color: #68788d;
+}
+
+
+/* CARDS */
+
+.conteudo {
+    background: #f5f9ff;
+}
+
+.titulo-secao {
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e4ecf7;
+
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(20, 100, 255, 0.10);
+}
+
+.icone {
+    width: 50px;
+    height: 50px;
+
+    background: #e8f1ff;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #718096;
+    font-size: 14px;
+}
+
+
+/* DESAFIOS */
+
+.desafios {
+    background: #1464ff;
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+.desafios .tag {
+    color: #a9c8ff;
+}
+
+.desafios h2 span {
+    color: white;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.item strong {
+    color: #a9c8ff;
+}
+
+.item p {
+    color: #e5efff;
+}
+
+
+/* REFLEXÃO */
+
+.reflexao {
+    text-align: center;
+
+    background: white;
+}
+
+.reflexao h2 {
+    max-width: 600px;
+
+    margin: auto;
+}
+
+#mensagem {
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    color: #68788d;
+
+    min-height: 55px;
+}
+
+
+/* CONCLUSÃO */
+
+.conclusao {
+    background: #eef5ff;
+}
+
+.conclusao-box {
+    max-width: 850px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 60px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(20, 100, 255, 0.08);
+}
+
+.conclusao-box p {
+    color: #68788d;
+
+    margin: 20px 0;
+}
+
+.frase {
+    color: #1464ff !important;
+
+    font-weight: bold;
+
+    border-left: 3px solid #1464ff;
+
+    padding-left: 15px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #0d1b2f;
+
+    color: #8fa1b8;
+
+    padding: 30px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    section {
+        padding: 70px 6%;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 50px;
+    }
+
+    .hero-card {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .desafios {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .conclusao-box {
+        padding: 35px 25px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+  }
